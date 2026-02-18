@@ -1,0 +1,39 @@
+{
+    // workbench
+    "workbench.colorTheme": "One Dark Pro Night Flat",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.hover.delay": null,
+    // go
+    "[go]": {
+        "editor.defaultFormatter": "golang.go",
+        "editor.formatOnSave": true
+    },
+    "gopls": {
+        "ui.semanticTokens": true
+    },
+    "[go.mod]": {
+        "editor.defaultFormatter": "golang.go"
+    },
+    "go.toolsManagement.autoUpdate": true,
+    "go.toolsEnvVars": {
+        "GO111MODULE": "on"
+    },
+    // rust
+    "rust-analyzer.rustfmt.extraArgs": [
+        "--edition",
+        "2024"
+    ],
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true
+    },
+    // editor
+    "editor.minimap.enabled": false,
+    // extensions
+    "extensions.ignoreRecommendations": true,
+    // others
+    "json.schemaDownload.enable": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.sideBar.location": "right"
+}
