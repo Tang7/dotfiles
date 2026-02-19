@@ -3,6 +3,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH="$PATH:$(go env GOPATH)/bin"
 
+export LIBRARY_PATH="$LIBRARY_PATH:$(brew --prefix)/lib"
+export PKG_CONFIG_PATH="$(brew --prefix)/lib/pkgconfig"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -44,7 +47,7 @@ HYPHEN_INSENSITIVE="true"
 DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -112,5 +115,9 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export MAELSTROM_PATH=/Users/agaetis/Agaetis/golang/fly-io-dist-chanllenge/maelstrom
 export MAELSTROM_PATH=/Users/agaetis/Agaetis/golang/fly-io-dist-chanllenge/maelstrom
 
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+export GO111MODULE=on
 
+[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
+export PATH="$PATH:$HOME/flutter/bin"
+
+eval "$(zoxide init zsh)"
