@@ -121,3 +121,12 @@ export GO111MODULE=on
 export PATH="$PATH:$HOME/flutter/bin"
 
 eval "$(zoxide init zsh)"
+
+vf() {
+  local file
+  file=$(rg --line-number --no-heading --color=always "$1" | fzf --ansi | cut -d: -f1,2)
+  if [ -n "$file" ]; then
+    vim +"${file#*:}" "${file%%:*}"
+  fi
+}
+
