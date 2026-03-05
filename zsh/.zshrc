@@ -76,7 +76,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,8 +117,19 @@ export MAELSTROM_PATH=/Users/agaetis/Agaetis/golang/fly-io-dist-chanllenge/maels
 
 export GO111MODULE=on
 
-[ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 export PATH="$PATH:$HOME/flutter/bin"
+
+# fzf always use riggrep
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git"'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
+# avoid repeating flags using rg
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+
+# Use `bat` as the man pager and fzf preview:
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export BAT_THEME="OneHalfDark"
 
 eval "$(zoxide init zsh)"
 
@@ -129,4 +140,20 @@ vf() {
     vim +"${file#*:}" "${file%%:*}"
   fi
 }
+
+rgf() {
+  rg --line-number --no-heading --color=always "${1:-.}" \
+    | fzf --ansi \
+          --delimiter : \
+          --preview 'bat --color=always --highlight-line {2} {1}' \
+          --preview-window 'right:60%:+{2}-5'
+}
+
+alias ls='eza'
+alias ll='eza -lah --git'
+alias lt='eza -T -L 2'
+# `fp` gives you a full fuzzy file picker with syntax-highlighted preview. Open with `vim $(fp)`.
+alias fp='fzf --preview "bat --color=always --style=numbers {}"'
+
+zl() { z "$@" && eza -lah --git; }
 
