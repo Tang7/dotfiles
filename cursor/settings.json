@@ -1,0 +1,104 @@
+{
+    "kite.showWelcomeNotificationOnStartup": false,
+    "go.toolsManagement.autoUpdate": true,
+    "security.workspace.trust.enabled": false,
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {},
+    "workbench.editorAssociations": {
+        "*.go": "default"
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "redhat.telemetry.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+    "gitlens.views.commitDetails.files.layout": "tree",
+    "animations.Install-Method": "Apc Customize UI++",
+    "apc.imports": [
+        "file://${userHome}/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.3/dist/updateHandler.js"
+    ],
+    "glassit.alpha": 220,
+    "cmake.configureOnOpen": false,
+    "cmake.showOptionsMovedNotification": false,
+    "extensions.ignoreRecommendations": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "settingsSync.ignoredExtensions": [
+        "ktiays.aicursor"
+    ],
+    "makefile.configureOnOpen": true,
+    "cSpell.userWords": [
+        "ACRCLOUD",
+        "actix",
+        "byot",
+        "crossterm",
+        "CRTR",
+        "datatypes",
+        "doryen",
+        "dotenv",
+        "epoll",
+        "glutin",
+        "hmac",
+        "kunai",
+        "modelcontextprotocol",
+        "musicxml",
+        "Nethack",
+        "notehead",
+        "Partwise",
+        "pemfile",
+        "Pimpl",
+        "Renderable",
+        "reqwest",
+        "ringbuffer",
+        "rmcp",
+        "Roguelike",
+        "schemars",
+        "selectandstart",
+        "serde",
+        "SFINAE",
+        "srgb",
+        "Threadpool",
+        "urlencoding",
+        "winit"
+    ],
+    "go.toolsEnvVars": {
+        "GO111MODULE": "on"
+    },
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.orientation": "vertical",
+    "workbench.activityBar.location": "bottom",
+    "[go]": {
+        "editor.defaultFormatter": "golang.go",
+        "editor.formatOnSave": true
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "rust-analyzer.rustfmt.extraArgs": [
+        "--edition",
+        "2024"
+    ],
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true
+    },
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.hover.delay": null,
+    "workbench.colorTheme": "One Dark Pro Night Flat",
+    "workbench.preferredDarkColorTheme": "One Dark Pro Night Flat",
+    "workbench.preferredLightColorTheme": "Gruvbox Dark Hard",
+    "workbench.navigationControl.enabled": false,
+    "workbench.layoutControl.enabled": false,
+    "cursor.aipreview.enabled": true,
+    "vim.cursorStylePerMode.insert": "line-thin",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.replace": "block-outline",
+    "vim.easymotion": true,
+    "vim.targets.enable": true,
+    "vim.foldfix": true,
+    "vim.handleKeys": {
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false
+    },
+    "search.defaultViewMode": "tree",
+    "window.commandCenter": true
+}
