@@ -1,0 +1,17 @@
+{
+  "allowedTools": [
+    "Read",
+    "Write",
+    "Bash(npm run build)",
+    "Bash(npm run test)",
+    "Bash(npm run lint)",
+    "Bash(git diff)",
+    "Bash(git log)",
+    "Bash(git status)"
+  ],
+  "deniedTools": [
+    "Bash(rm -rf *)",
+    "Bash(git push --force)",
+    "Bash(DROP TABLE)"
+  ]
+}
