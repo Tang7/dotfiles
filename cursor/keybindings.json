@@ -59,6 +59,33 @@
         "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible"
     },
 
+    // Windows
+    {
+        "key": "space w v",
+        "command": "workbench.action.splitEditor",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "space w s",
+        "command": "workbench.action.splitEditorDown",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "space w o",
+        "command": "workbench.action.closeEditorsInOtherGroups",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "space w =",
+        "command": "workbench.action.evenEditorWidths",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "space w e",
+        "command": "workbench.action.explorer.openToSide",
+        "when": "vim.mode == 'Normal' && explorerViewletFocus"
+    },
+
     // Editor Actions
     {
         "key": "shift-j",
